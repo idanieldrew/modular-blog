@@ -25,9 +25,9 @@ class UserRepository implements Repository
     */
     public function paginate($number = 10)
     {
-        if (Gate::denies('viewAny',User::class)){
+        /*if (Gate::denies('viewAny',User::class)){
             abort(403);
-        }
+        }*/
 
 //        return $this->model()->paginate($number);
 
@@ -41,9 +41,9 @@ class UserRepository implements Repository
     */
     public function show($id)
     {
-        if (Gate::denies('view', [User::class, $id])) {
+        /*if (Gate::denies('view', [User::class, $id])) {
             abort(403);
-        }
+        }*/
 
         return $this->model()->findOrFail($id);
     }

@@ -24,7 +24,7 @@ class PostRepository implements Repository
      */
     public function paginate($number = 10)
     {
-        return $this->model()->paginate($number);
+        return $this->model()->get();
     }
 
     /**
