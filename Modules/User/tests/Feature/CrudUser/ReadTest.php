@@ -47,3 +47,4 @@ class ReadTest extends TestCase
         $this->get(route('user.index'))->assertForbidden();
     }
 }
+
